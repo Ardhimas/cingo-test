@@ -1,5 +1,4 @@
-export const OPEN_BUTTON = 'OPEN_BUTTON'
-export const CLOSE_BUTTON = 'CLOSE_BUTTON'
+import {OPEN_BUTTON, CLOSE_BUTTON} from '../constants'
 
 function createReducer(initialState, reducerMap) {
   return (state = initialState, action) => {

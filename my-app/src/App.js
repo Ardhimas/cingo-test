@@ -6,6 +6,7 @@ import createLogger from 'redux-logger';
 import rootReducer from './reducers';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import IncrementComponent from './increment'
 
 const loggerMiddleware = createLogger();
 const store = createStore(
@@ -31,6 +32,7 @@ class App extends Component {
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
+          <IncrementComponent />
         </div>
       </Provider>
     );
