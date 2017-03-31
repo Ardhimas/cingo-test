@@ -1,12 +1,20 @@
+// npm imports
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
-import rootReducer from './reducers';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-import IncrementComponent from './increment'
+
+// Components/Utils
+import IncrementComponent from './increment';
+import rootReducer from './reducers';
+
+// Static files
+import logo from './logo.svg';
+
+// Stylesheets
+import './App.css';
+import './bootstrap.css';
 
 const loggerMiddleware = createLogger();
 const store = createStore(
@@ -27,7 +35,7 @@ class App extends Component {
         <div className="App">
           <div className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h2>Welcome to React</h2>
+            <h2>Welcome to React Now</h2>
           </div>
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.

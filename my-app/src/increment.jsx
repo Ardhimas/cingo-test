@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as basicActionCreators from './actions/basic';
+import { Button } from 'react-bootstrap';
 
 class IncrementComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
 
-    // This binding is necessary to make `this` work in the callback
+    // This binding is necessary to make 'this' work in the callback
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -22,13 +23,14 @@ class IncrementComponent extends Component {
 
   render() {
     return (
-      <button onClick={this.handleClick}>
+      <Button onClick={this.handleClick} active={this.state.isToggleOn} bsStyle="warning">
         {this.props.basic.isOpen ? 'Open' : 'Closed'}
-      </button>
+      </Button>
     );
   }
 }
 
+// This is the redux section of the web app, you can ignore this for now.
 const mapStateToProps = (state) => ({
   basic  : state.basic,
 });
